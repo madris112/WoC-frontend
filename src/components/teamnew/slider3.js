@@ -57,9 +57,10 @@ export default function Slider3() {
                 </div>
                 </div>
                 </div>
+                
                 <div>
                 <div className = "coord">
-                <div className = "icon">
+                    <div className = "icon">
                         <img src = {Gunjan}/>
                         <Namecard name = 'Gunjan Dhanuka' link1 = "https://www.linkedin.com/in/gunjan-dhanuka/" link2 = "mailto:lucifergd192@gmail.com"/>
                     </div>
@@ -73,6 +74,7 @@ export default function Slider3() {
                     </div>
                 </div>
                 </div>
+                
                 <div>
                 <div className = "coord">
                     <div className = "icon">
@@ -89,6 +91,7 @@ export default function Slider3() {
                     </div>
                 </div>
                 </div>
+
                 <div>
                 <div className = "coord">
                 <div className = "icon">

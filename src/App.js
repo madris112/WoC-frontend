@@ -11,7 +11,8 @@ import Conduct from './pages/Conduct.js';
 import Leaderboard from './pages/leaderboard_temp';
 import Project from './pages/Project';
 import Team from './pages/teamnew'
-import TeamTemp from './pages/leaderboard_temp'
+import Reward from './pages/Reward/reward';
+//import TeamTemp from './pages/leaderboard_temp'
 function App() {
   return (
     <div className="App">
@@ -22,6 +23,7 @@ function App() {
           <Route path="/leaderboard" component={Leaderboard} />
           <Route path="/project" component={Project} />
           <Route path="/team" component={Team} />
+          <Route path="/reward" component={Reward} />
         </Switch>
         {/* <Footer/> */}
       </BrowserRouter>

@@ -12,6 +12,8 @@ export default function footer(props) {
     return (
         <div className="footer" style={footer_style} >
             <div className="foot" style={{ backgroundColor: props.bg ?? ""}}>
+
+                {/* -------- 2 LOGOS------------- */}
                 <div className="together">
                     <h1>This time we are together...</h1>
                     <div className="togetherLogo">
@@ -20,6 +22,8 @@ export default function footer(props) {
                         <img src={guwLogo} alt="" srcset="" />
                     </div>
                 </div>
+
+                {/* ----------QUICK LINKS-------------- */}
                 <div className="ql">
                     <h1>Quick Links</h1>
                     <hr className="hiddenHr" />
@@ -27,9 +31,12 @@ export default function footer(props) {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/project">Projects</Link></li>
                         <li><Link to="/register">Register</Link></li>
-                        <li><Link to="/team">Team</Link></li>
+                        <li><Link to="/reward">Rewards</Link></li>
+                        <li><Link to="/team">Team</Link></li>            
                     </ul>
                 </div>
+
+                {/* ---------------CONTACT-------------- */}
                 <div className="contact">
                     <h1>Contact Us</h1>
                     <hr className="hiddenHr" />
