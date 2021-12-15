@@ -1,15 +1,15 @@
 import React, { useMemo, useState, useEffect } from "react";
 import Navigation from "../../components/Navigation";
-import style from "./Leaderboard.css";
 import BTable from "react-bootstrap/Table";
 import Container from "react-bootstrap/Container";
 import Footer from "../../components/footer";
 import { usePagination, useTable } from "react-table";
 import { Dropdown } from "react-bootstrap";
-
+import style from "./Leaderboard.css";
 const Leaderboard = () => {
 
     const[fi, setFi] = useState([]);
+    const[se, setSe] = useState([]);
 
     useEffect(() => {
 
@@ -18,7 +18,6 @@ const Leaderboard = () => {
         const tempfi = [];
         const target = `https://docs.google.com/spreadsheets/d/e/2PACX-1vQbBtmoTx9NEqcob94XXoIMnorCXObHA7wb84DOhJ5-Qaoxq38Az5Gh8Uk_FHuB5J-uUgLb8RNBpwUO/pub?gid=0&single=true&output=csv`;
         const result = await fetch(target);
-
         const data = await result.text();
         var rows = data.toString().split("\r");
         for(let i = 0; i < rows.length ; i++){
@@ -42,13 +41,11 @@ const Leaderboard = () => {
 
           score["col2"] = arr[0];
           score["col3"] = arr[1];
-
           tempfi.push(score);
-          
         }
 
         setFi(tempfi);
-
+        setSe(tempfi);
       }catch(error){
 
         console.log(error);
@@ -78,7 +75,18 @@ const Leaderboard = () => {
     []
   );
 
-  const data = useMemo(() => fi,[fi]);
+  let data = useMemo(() => fi,[fi]);
+  let data_dup = useMemo(() => se, [se]);
+
+  const SearchHandler = (e) => {
+      let query = e.target.value.toLowerCase();
+      let temp = [];
+      data_dup.forEach((user) => {
+          if(user.col2.toLowerCase().includes(query))
+            temp.push(user);
+      })
+      setFi(temp);
+  }
 
   // const dta = useMemo(
   //   () => [
@@ -207,6 +215,14 @@ const Leaderboard = () => {
         <div className='space'></div>
         <div className='title mb-5 p-3'>LEADERBOARD</div>
         <Container>
+          <input
+              type="search"
+              name="searchBar"
+              id="searchBar"
+              placeholder="Search for Participants"
+              onChange={(e) => SearchHandler(e)}
+          />
+
           <div className='tablee'>
             {/* <BTable responsive borderless striped hover>
               <thead>
