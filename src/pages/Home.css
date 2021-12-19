@@ -551,21 +551,33 @@ svg{
 }
 /* ----------SPONSORS---------------- */
 .spons_box img{
-  width: 130px;
-  height: auto;
+  width: auto;
+  height: 50px;
   z-index: 2;
   position: relative;
 }
 .spons_box{
   display: grid;
-  grid-template-columns: repeat(6, 0.15fr);
+  grid-template-columns: repeat(4, 0.15fr);
   z-index: 2;
   position: relative;
   margin: 30px auto;
   align-items: center;
   width: 100%;
   justify-content: center;
-  height: 250px;
+  height: 150px;
+  grid-column-gap: 30px;
+}
+.spons_box1{
+  grid-template-columns: repeat(3, 0.15fr);
+  margin-top: 0;
+
+}
+.spons_box1 img{
+  width: 135px;
+  height: auto;
+  z-index: 2;
+  position: relative;
 }
 /* .spons_box img:hover{
   width: 152px;
@@ -575,13 +587,14 @@ svg{
 
 @media only screen and (max-width: 1050px) {
   .spons_box{
-    grid-template-columns: repeat(3,0.2fr);
+    /* grid-template-columns: repeat(3,0.2fr); */
     grid-row-gap: 50px;
     height: auto;
     margin-bottom: 30px;
+    grid-column-gap: 20px;
   }
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 900px) {
 .spons_box{
   display: flex;
   flex-direction: column;
