@@ -327,5 +327,45 @@
     "mentors": ["Sandeep03edu"],
     "lang": ["Java"],
     "tag": ["Firebase", "App Dev"]
-  }
+  },
+  {
+    "repo-url": "https://github.com/asmit203/TalkitOut",
+    "title": "TalkitOut",
+    "desc": "A platform for people to share their thoughts and feelings with others.",
+    "mentors": ["asmit203"],
+    "lang": ["HTML", "CSS", "Django"],
+    "tag": ["App Dev"]
+  },
+    {
+        "repo-url": "https://github.com/padmaja2305/face_recognition-application",
+        "title": "Face Recognition Application",
+        "desc": "This is a face recognition application which can detect faces in an image and can also detect faces in real time.",
+        "mentors": ["padmaja2305"],
+        "lang": ["Python"],
+        "tag": ["Machine Learning"]
+    },
+    {
+        "repo-url": "https://github.com/KartuzGupta/Chat-App",
+        "title": "Chat-App",
+        "desc": "A simple chat application",
+        "mentors": ["KartuzGupta", "PrateekUp"],
+        "lang": ["HTML", "CSS", "JS"],
+        "tag": ["Web Dev"]
+    },
+    {
+        "repo-url": "https://github.com/aryasoni98/AI-Interview",
+        "title": "AI-Interview",
+        "desc": "We are building an interface that helps users with a situation by the use of an AI that asks questions on the basis of a code which the aspirant has written, asked from a diverse pack of frequently asked coding questions.",
+        "mentors": ["aryasoni98"],
+        "lang": ["Python", "HTML", "CSS", "JS"],
+        "tag": ["Machine Learning", "Deep Learning"]
+    },
+    {
+        "repo-url": "https://github.com/aryasoni98/Codeless-Builder",
+        "title": "Codeless-Builder",
+        "desc": "We are building a platform that helps users to build a website without writing a single line of code.",
+        "mentors": ["aryasoni98"],
+        "lang": ["TypeScript", "CSS", "JS"],
+        "tag": ["Web Dev"]
+    }
 ]
